@@ -22,7 +22,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 
 RUN wget "https://github.com/Illumina/manta/releases/download/v${MANTA_VERSION}/manta-${MANTA_VERSION}.release_src.tar.bz2" && \
     tar -xjf manta-${MANTA_VERSION}.release_src.tar.bz2 && \
-    rm manta-${MANTA_VERSION}-src.tar.bz2 && \
+    rm manta-${MANTA_VERSION}.release_src.tar.bz2 && \
     mkdir build && \
     cd build && \
     ../manta-${MANTA_VERSION}.release_src/configure --jobs=$(nproc) --prefix=${INSTALL_PREFIX} && \
